@@ -1,7 +1,9 @@
 // Function
-
-const sun = (x: number, y: number): string => {
-  return (x + y).toString();
+interface MathFunc {
+  (x: number, y: number): number;
+}
+const sun: MathFunc = (x: number, y: number): number => {
+  return x + y;
 }
 
 const value = sun(1, 2);
